@@ -68,7 +68,7 @@ public class ValidationItemControllerV4 {
         item.setQuantity(form.getQuantity());
 
         Item savedItem = itemRepository.save(item);
-        redirectAttributes.addAttribute("itemId", savedItem.getId());
+        redirectAttributes.addAttribute("itemId", savedItem.getId());       //redirect 할때 model에 값 넣어줌
         redirectAttributes.addAttribute("status", true);
         return "redirect:/validation/v4/items/{itemId}";
     }
